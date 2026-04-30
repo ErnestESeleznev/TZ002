@@ -10,7 +10,6 @@ namespace WebApi
     {
         public static void Main(string[] args)
         {
-
             var builder = WebApplication.CreateBuilder(args);
             builder.Configuration.AddJsonFile("appsettings.json", false, true);
 
@@ -31,7 +30,7 @@ namespace WebApi
             #region RabbitMQ
             var factory = new ConnectionFactory()
             {
-                HostName = "vmlinux",
+                HostName = "rabbitmq",
                 UserName = "guest",
                 Password = "guest"
             };
@@ -55,4 +54,5 @@ namespace WebApi
         }
     }
 }
+// Scaffold-DbContext "Host=db;Port=5432;Username=postgres;Password=password;Database=db_test" Npgsql.EntityFrameworkCore.PostgreSQL
 // Scaffold-DbContext "Host=192.168.88.196;Port=5432;Username=postgres;Password=password;Database=db_test" Npgsql.EntityFrameworkCore.PostgreSQL
