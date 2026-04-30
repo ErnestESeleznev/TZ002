@@ -18,6 +18,7 @@ services:
  rabbitmq:
     image: rabbitmq:3.10.7-management
     container_name: mq
+    restart: always
     ports:
       - 15672:15672
       - 5672:5672
@@ -25,6 +26,7 @@ services:
  app:
     image: i_app
     container_name: c_app
+    restart: always
     build:
       context: .
     depends_on:
