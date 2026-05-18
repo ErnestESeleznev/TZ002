@@ -192,9 +192,9 @@ services:
       OTEL_TRACES_SAMPLER: always_on
       OTEL_RESOURCE_ATTRIBUTES: service.namespace=WebApi,service.version=1.0.0,deployment.environment=local
     depends_on:
-      - db
+      - postgres
       - rabbitmq
-      - otel-collector:
+      - otel-collector
     ports:
       - '5000:5000'
 
