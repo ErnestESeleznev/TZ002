@@ -5,6 +5,18 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/Home/Index": {
+      "get": {
+        "tags": [
+          "Home"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Main/AddRabbitTask": {
       "get": {
         "tags": [
@@ -182,6 +194,18 @@
           }
         }
       }
+    },
+    "/api/Main/Test": {
+      "get": {
+        "tags": [
+          "Main"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -221,6 +245,9 @@
     }
   },
   "tags": [
+    {
+      "name": "Home"
+    },
     {
       "name": "Main"
     }

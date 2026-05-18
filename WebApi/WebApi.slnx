@@ -1,3 +1,5 @@
 <Solution>
+  <Project Path="WebApi.Library/WebApi.Library.csproj" Id="7252c5e5-a2ea-45e4-adae-f6b970e92c93" />
+  <Project Path="WebApi.Test/WebApi.Test.csproj" Id="93ff7d1a-d7c4-4a10-854e-8ee5019cd708" />
   <Project Path="WebApi/WebApi.csproj" />
 </Solution>

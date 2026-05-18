@@ -1,6 +1,16 @@
 [
   {
-    "ContainingType": "WebApi.Controllers.MainController",
+    "ContainingType": "WebApi.Controllers.HomeController",
+    "Method": "IndexAsync",
+    "RelativePath": "api/Home/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.MainController",
     "Method": "AddRabbitTask",
     "RelativePath": "api/Main/AddRabbitTask",
     "HttpMethod": "GET",
@@ -31,7 +41,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WebApi.Controllers.MainController",
+    "ContainingType": "WebApi.MainController",
     "Method": "AddTask",
     "RelativePath": "api/Main/AddTask",
     "HttpMethod": "GET",
@@ -57,7 +67,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WebApi.Controllers.MainController",
+    "ContainingType": "WebApi.MainController",
     "Method": "ExeRabbitTask",
     "RelativePath": "api/Main/ExeRabbitTask",
     "HttpMethod": "GET",
@@ -67,7 +77,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WebApi.Controllers.MainController",
+    "ContainingType": "WebApi.MainController",
     "Method": "GetAllDataAsync",
     "RelativePath": "api/Main/GetAllData",
     "HttpMethod": "GET",
@@ -76,7 +86,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebApi.Usertask, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebApi.Models.DataBase.Usertask, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -87,7 +97,7 @@
     ]
   },
   {
-    "ContainingType": "WebApi.Controllers.MainController",
+    "ContainingType": "WebApi.MainController",
     "Method": "PingAsync",
     "RelativePath": "api/Main/Ping",
     "HttpMethod": "GET",
@@ -97,7 +107,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WebApi.Controllers.MainController",
+    "ContainingType": "WebApi.MainController",
     "Method": "RemoveTask",
     "RelativePath": "api/Main/RemoveTask",
     "HttpMethod": "GET",
@@ -120,6 +130,16 @@
         "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.MainController",
+    "Method": "TestAsync",
+    "RelativePath": "api/Main/Test",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]

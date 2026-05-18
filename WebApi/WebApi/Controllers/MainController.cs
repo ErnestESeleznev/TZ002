@@ -1,18 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
-using RabbitMQ.Client;
-using RabbitMQ.Client.Events;
-using System.Collections;
-using System.ComponentModel.DataAnnotations;
-using System.Net.NetworkInformation;
-using System.Text;
-using System.Text.Json.Serialization;
 using Newtonsoft.Json;
-using WebApi;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+using RabbitMQ.Client;
+using System.Diagnostics;
+using System.Text;
+using WebApi.Models.DataBase;
+using WebApi.Models.RequestArgsForm;
 
-namespace WebApi.Controllers
+namespace WebApi
 {
     [ApiController]
     [Route("/api/[controller]")]
@@ -26,19 +21,23 @@ namespace WebApi.Controllers
         private readonly ILogger<MainController> _log;
         private readonly ApplicationSettings _settings;
         private readonly IConnection _connection;
+        private readonly HttpClient _httpClient;
+
+        private static readonly ActivitySource ActivitySource = new("WebApi");
 
         /// <summary>
         /// Конструктор класса
         /// </summary>
-        public MainController(ILogger<MainController> logger, IOptions<ApplicationSettings> settings, IConnection connection)
+        public MainController(ILogger<MainController> logger, IOptions<ApplicationSettings> settings, IConnection connection, HttpClient httpClient)
         {
             _log = logger;
             _settings = settings.Value;
             _connection = connection;
+            _httpClient = httpClient;
         }
 
         /// <summary>
-        /// Поставить задание из Rabbit
+        /// Поставить задание в очередь Rabbit
         /// </summary>
         [HttpGet("AddRabbitTask")]
         public async Task<IActionResult> AddRabbitTask([FromQuery] DataForUserTaskFormRabbit data)
@@ -137,6 +136,11 @@ namespace WebApi.Controllers
             // http://localhost:5245/api/main/addtask?Title=t2&Description=d2&Status=s2
             // http://localhost:5245/api/main/addtask?Title=t3&Description=d3&Status=s3
 
+            using var activity = ActivitySource.StartActivity("WebApi.AddTask");
+            activity?.SetTag("Title", data.Title);
+            activity?.SetTag("Description", data.Description);
+            activity?.SetTag("Status", data.Status);
+
             _log.LogInformation("Запущен метод {method}: ", nameof(AddTask));
             _log.LogInformation($"Title={data.Title} Description={data.Description} Status={data.Status}");
 
@@ -204,30 +208,26 @@ namespace WebApi.Controllers
             return Ok($"Success {DateTime.Now}");
         }
 
-
-
         /// <summary>
-        /// Входная форма для аргументов в запросе на изменения в таблице
+        /// Вызов внешнего АПИ для тестирования OpenTelemetry
         /// </summary>
-        public class DataForUserTaskForm
-        {
-            [Required(ErrorMessage = "Title IS REQUIRED")]
-            public string Title { get; set; } = "Empty";
-            public string? Description { get; set; } = default;
-            public string? Status { get; set; } = default;
-        }
+        [HttpGet("Test")]
+        public async Task<IActionResult> TestAsync()
+        {   // http://localhost:5245/api/main/test
 
-        /// <summary>
-        /// Входная форма для аргументов в запросе на изменения в таблице
-        /// </summary>
-        public class DataForUserTaskFormRabbit
-        {
-            [Required(ErrorMessage = "Task IS REQUIRED")]
-            public string Task { get; set; } = "Empty";
-            [Required(ErrorMessage = "Title IS REQUIRED")]
-            public string Title { get; set; } = "Empty";
-            public string? Description { get; set; } = default;
-            public string? Status { get; set; } = default;
+            _log.LogInformation("Запущен метод {method}: ", nameof(PingAsync));
+
+            string data = "Error";
+            var response = await _httpClient.GetAsync("http://www.cbr.ru/scripts/XML_daily.asp?date_req=02/03/2002");
+            if (response.IsSuccessStatusCode)
+            {
+                // data = await response.Content.ReadAsStringAsync();
+                using (var sr = new StreamReader(await response.Content.ReadAsStreamAsync(), Encoding.GetEncoding("utf-8")))
+                {
+                    data = sr.ReadToEnd();
+                }
+            }
+            return Ok($"{data}");
         }
     }
 }
