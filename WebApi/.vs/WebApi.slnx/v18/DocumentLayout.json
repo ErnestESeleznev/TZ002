@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\SolutionTZ02\\WebApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebApi\\WebApi.csproj|c:\\solutiontz02\\webapi\\webapi\\controllers\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebApi\\WebApi.csproj|c:\\solutiontz02\\webapi\\webapi\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{93FF7D1A-D7C4-4A10-854E-8EE5019CD708}|WebApi.Test\\WebApi.Test.csproj|c:\\solutiontz02\\webapi\\webapi.test\\unittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{93FF7D1A-D7C4-4A10-854E-8EE5019CD708}|WebApi.Test\\WebApi.Test.csproj|solutionrelative:webapi.test\\unittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebApi\\WebApi.csproj|c:\\solutiontz02\\webapi\\webapi\\controllers\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7252C5E5-A2EA-45E4-ADAE-F6B970E92C93}|WebApi.Library\\WebApi.Library.csproj|c:\\solutiontz02\\webapi\\webapi.library\\myservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,21 +42,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 337,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 9,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UnitTest.cs",
-              "DocumentMoniker": "C:\\SolutionTZ02\\WebApi\\WebApi.Test\\UnitTest.cs",
-              "RelativeDocumentMoniker": "WebApi.Test\\UnitTest.cs",
-              "ToolTip": "C:\\SolutionTZ02\\WebApi\\WebApi.Test\\UnitTest.cs",
-              "RelativeToolTip": "WebApi.Test\\UnitTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T08:12:58.086Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -71,7 +58,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "UnitTest.cs",
+              "DocumentMoniker": "C:\\SolutionTZ02\\WebApi\\WebApi.Test\\UnitTest.cs",
+              "RelativeDocumentMoniker": "WebApi.Test\\UnitTest.cs",
+              "ToolTip": "C:\\SolutionTZ02\\WebApi\\WebApi.Test\\UnitTest.cs",
+              "RelativeToolTip": "WebApi.Test\\UnitTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T08:12:58.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Test1.cs",
               "DocumentMoniker": "C:\\SolutionTZ02\\WebApi\\WebApi.Test\\Test1.cs",
               "RelativeDocumentMoniker": "WebApi.Test\\Test1.cs",
@@ -79,8 +78,7 @@
               "RelativeToolTip": "WebApi.Test\\Test1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T07:46:05.846Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T07:46:05.846Z"
             },
             {
               "$type": "Document",
@@ -92,8 +90,7 @@
               "RelativeToolTip": "WebApi.Library\\MyService.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwBQAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T21:46:36.475Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-16T21:46:36.475Z"
             },
             {
               "$type": "Document",
@@ -105,8 +102,7 @@
               "RelativeToolTip": "WebApi\\ApplicationSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-29T08:31:49.666Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-29T08:31:49.666Z"
             },
             {
               "$type": "Document",
@@ -130,25 +126,24 @@
               "RelativeToolTip": "WebApi\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T17:33:27.087Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-28T17:33:27.087Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "MainController.cs",
               "DocumentMoniker": "C:\\SolutionTZ02\\WebApi\\WebApi\\Controllers\\MainController.cs",
               "RelativeDocumentMoniker": "WebApi\\Controllers\\MainController.cs",
               "ToolTip": "C:\\SolutionTZ02\\WebApi\\WebApi\\Controllers\\MainController.cs",
               "RelativeToolTip": "WebApi\\Controllers\\MainController.cs",
-              "ViewState": "AgIAAKcAAAAAAAAAAAAUwMwAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAowG8AAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-29T08:40:28.085Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\SolutionTZ02\\WebApi\\WebApi\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "WebApi\\Controllers\\HomeController.cs",
